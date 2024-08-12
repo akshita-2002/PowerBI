@@ -279,3 +279,31 @@ AllSales = CALCULATE([Total Sales],ALL(Orders))
 
 ### BEST PRACTISES TO INCREASE PERFORMANCE 
 ![alt text](image-18.png)
+
+
+
+
+- KPI visuals always considers,last quater,last month and last day as achievement.
+- KPI visuals works with time intelligence functions
+- if we take year on trend axis, the kpi will show the total sales for year 2023 as achievement
+- if we take last quarter, it shows the sum of last quarters of all years.
+![alt text](image-19.png)
+
+
+## SQL CONNECTION
+- can be connected in two ways
+1. import mode : the data is downloaded into the system ram , faster retrieval of data
+
+2. DirectQuery mode : data is not imported to powerBI , connection is established to the server and queries are used to import data.
+
+3. LIve conenction 
+
+
+## ROW LEVEL SECURITY 
+
+- to control acess to data at the individual row level 
+- can be created using manage roles in modelling
+- using view roles we can switch between roles
+
+
+
