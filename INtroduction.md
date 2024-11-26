@@ -10,7 +10,7 @@
 
 
 # POWER BI (Power Business Intelligence)
-- picks up data from different sources , cleans and combines the data , then convert the data into vizualization and then generate repoerts.
+- picks up data from different sources , cleans and combines the data , then convert the data into vizualization and then generate reports.
 ![alt text](image.png)
 
 - Power BI Desktop is used to create reports and to share these reports we use PowerBI Service .
@@ -305,5 +305,39 @@ AllSales = CALCULATE([Total Sales],ALL(Orders))
 - can be created using manage roles in modelling
 - using view roles we can switch between roles
 
+![alt text](image-20.png)
 
 
+- we can auto generate reports using semantic model in power bi service
+
+
+## GATEWAY 
+- we can auto refresh data using gateway 
+
+
+
+
+## ADVANCED DAX
+
+- AllExcept : comparision is done with parents.Suppose we have categories and sub categories , we can compare the sub categories with the category(parent)
+![alt text](image-21.png)
+
+- AllSelected : comaparisions done on whatever filters we apply using slicers.
+Suppose we are apply slicer on sub category column (and select )
+![alt text](image-22.png)
+
+
+- Time Intelligence functions
+
+1. sale last year -> CALCULATE(
+        TotalSales,SAMEPERIODLASTYEAR(DateTable[Date])
+
+)
+
+2. paralell period -> we can go back by number of months or year or can go to future by number of years, months
+![alt text](image-23.png)
+
+
+
+4. MTD - sums cummulative for each day in a month
+![alt text](image-24.png)
