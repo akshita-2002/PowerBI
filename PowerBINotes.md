@@ -128,3 +128,33 @@ SELECT CAST(CustomerPostalCode as varchar(10)) FROM Sales.Customers
 - determining anomolies, examining and developing underlying data structures and querying data statistics (row counts, value distributions, maximum, minimum, average)
 - Distinct values are all the different values in a column(total count of how many values are present), including duplicates and null values, while unique values do not include duplicates or nulls(how many of those values only appear once).
 - value distribution graph gives the count for each distinct value in that column.
+
+
+# STAR SCHEMA
+
+- design principle
+- classifies model tables as fact or dimension
+- in a diagram fact table forms center of star
+- dimension tables are placed around fact table(points of the star)
+
+## FACT TABLES
+- stores rows that represent observations that record a specific business activity
+- contains quantitative data 
+- stores vast amount of data
+- Eg : sales revenue, quantity, profit
+- can be summarized or aggregated ( total sales, average profit)
+
+## DIMENSION TABLES
+- contains descriptive attributes 
+- provides context to facts
+- Eg: product names, customer details
+- primary key that related to fact table
+- relatively smaller
+- fact table refere to dimension tables using foreign key
+- use to filter and group data
+
+- Example Query:
+To calculate total sales by category, the SalesAmount from the fact table can be joined with the Category from the product dimension table.
+
+- dimension are related to fact using one-to-many-relationships
+- when filters are applied to dimension table columns, related facts are summarized
